@@ -1,0 +1,37 @@
+Square every digit (7kyu)
+
+
+Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+Note: The function accepts an integer and returns an integer
+
+
+
+
+
+My solution: 
+
+function squareDigits(num){
+
+//convert num to string and split
+
+let arr = num.toString().split('')
+
+// map over this array of nos. and square each one
+let newarr = arr.map(num => num * num)
+
+// join newarr and convert answer from string to //number
+
+return Number(newarr.join(""))
+
+}
+
+Optimal solution: 
+
+function squareDigits(num){
+  return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+  
+}
+
