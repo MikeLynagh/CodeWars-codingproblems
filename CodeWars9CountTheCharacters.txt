@@ -1,0 +1,41 @@
+Count the characters 7kyu
+
+Instructions: 
+
+The goal of this kata is to write a function that takes two inputs: a string and a character. The function will count the number of times that character appears in the string. The count is case insensitive.
+
+For example:
+
+countChar("fizzbuzz","z") => 4
+countChar("Fancy fifth fly aloof","f") => 5
+
+My solution:
+
+function countChar(string, char){
+// create a total to count appearances of char in string
+let total = 0
+// convert string to lowercase
+let newStr = string.toLowerCase()
+// convert char to lowercase
+let newChar = char.toLowerCase()
+// loop over string
+for(let i = 0; i <= string.length; i++){
+// if the index of the current string matches newChar
+// add 1 to total
+// return total 
+if(newStr[i] === newChar){
+  total ++
+}
+}
+  return total 
+}
+
+Optimal Solution:
+function countChar(s, c) {
+  c = c.toLowerCase();
+  return s.toLowerCase().split('').filter(x => x == c).length;
+}
+
+
+Lessons: 
+My main oversight here was that I did not initially convert char to lower case, this meant I was failing the test whenever char was a capital letter. 
