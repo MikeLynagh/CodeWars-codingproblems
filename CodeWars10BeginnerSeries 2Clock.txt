@@ -1,0 +1,34 @@
+CodeWars10BeginnerSeries#2Clock
+
+Instructions: 
+
+Clock shows h hours, m minutes and s seconds after midnight.
+
+Your task is to write a function which returns the time since midnight in milliseconds.
+
+Example:
+
+h = 0:
+m = 1:
+s = 1:
+
+result = 61000
+
+My solution: 
+
+function past(h, m, s){
+// convert hours to seconds 
+let hoursec = (h * 3600)
+// convert mins to seconds 
+let minsec = (m * 60)
+// add up total seconds and multiply by 1000 to get 
+// milliseconds
+return (hoursec + minsec + s) * 1000
+}
+
+
+Optimal solution:
+
+function past(h, m, s){
+  return ((h*3600)+(m*60)+s)*1000;
+}
