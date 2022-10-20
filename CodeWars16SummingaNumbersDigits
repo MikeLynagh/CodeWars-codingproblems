@@ -1,0 +1,25 @@
+Task: 
+
+Write a function named sumDigits which takes a number as input and returns the sum of the absolute value of each of the number's decimal digits.
+
+For example: (Input --> Output)
+
+10 --> 1
+99 --> 18
+-32 --> 5
+Let's assume that all numbers in the input will be integer values.
+
+My solution: 
+
+function sumDigits(number) {
+    // create a result equals 0
+let result = 0
+    // convert number to string and split it into individual parts 
+    let arr = Math.abs(number).toString().split('')
+// iterate over those numbers and add each one together. Store answer in result
+    arr.forEach(num => {
+        console.log(result += parseInt(num))
+    })
+
+    return result 
+}
